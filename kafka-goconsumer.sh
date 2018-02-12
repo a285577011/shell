@@ -23,7 +23,7 @@ function addAll(){
                     if [[ "$topicName" != "$excludePhpfile" ]];then
                         pid=$(ps x | grep -w "$yiiConsole $topicName" | grep -v grep | awk '{print $1}')
                         if [ ! -n "$pid" ];then
-                                nohup $yiiConsole $topicName > $basepath'/'$topicName".out" 2>&1 &
+                                nohup $yiiConsole $topicName >> $basepath'/'$topicName".out" 2>&1 &
                         fi
                     fi
 
@@ -47,7 +47,7 @@ case $1 in
                         for((i=1;i<=$num;i++));
                         do
             #echo $2 >> $fileName
-                        nohup $yiiConsole $2 > $basepath'/'$2".out" 2>&1 &
+                        nohup $yiiConsole $2 >> $basepath'/'$2".out" 2>&1 &
                         echo "nohup $yiiConsole $2 & 2>&1 >>$basepath/$2.out"
                         #nohup $yiiConsole" "$command" "$2 &
                         echo "add topic $2"
