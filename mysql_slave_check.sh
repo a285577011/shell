@@ -18,7 +18,7 @@ do
       done
       char="MySQL slave is not ok"
       echo "$char"
-      #echo "$char"|mail -s "$char" 995345781@qq.com
+      #echo "$char"|mail -s "$char" 285577011@qq.com
       break
   fi
   sleep 30
