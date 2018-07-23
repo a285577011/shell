@@ -1,6 +1,9 @@
  438  wget http://download.redis.io/releases/redis-3.2.3.tar.gz
   439  tar -zxvf redis-3.2.3.tar.gz
   440  cd redis-3.2.3
+    441  make && make install
+  442  ./utils/install_server.sh 
+  443  chkconfig --list
   444  /etc/init.d/redis 6379 stop
   445  /etc/init.d/redis stop
   446  ps aux | grep redis
