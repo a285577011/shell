@@ -1,0 +1,16 @@
+ 438  wget http://download.redis.io/releases/redis-3.2.3.tar.gz
+  439  tar -zxvf redis-3.2.3.tar.gz
+  440  cd redis-3.2.3
+  444  /etc/init.d/redis 6379 stop
+  445  /etc/init.d/redis stop
+  446  ps aux | grep redis
+  447  /etc/init.d/redis_63790 start
+  448  ps aux | grep redis
+  449  vim /etc/redis/63790.conf 
+  450  /etc/init.d/redis_63790 restart
+  
+  
+  
+  
+  
+  wget -c http://soft.vpser.net/lnmp/lnmp1.5.tar.gz && tar zxf lnmp1.5.tar.gz && cd lnmp1.5 && ./install.sh lnmp
